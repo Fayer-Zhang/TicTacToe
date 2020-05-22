@@ -1,7 +1,5 @@
+![avatar](/images/1.png)
 
-  [Instructions in English](docs/README.en.md)
+![avatar](/images/DRAW.png)
 
-  OR
-
-  [Instructions en français](docs/README.fr.md)
-      
+![avatar](/images/WIN.png)
