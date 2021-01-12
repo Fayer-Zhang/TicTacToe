@@ -4,7 +4,7 @@ This version is continuing with the work of version 1. In the previous version, 
 
 ### Human vs (Dumb) Machine
 Three kinds of players: the human player, and two dumb computer players.
-![avatar](/images/players.png)
+![avatar](/version 2/images/players.png)
 
 The game can have human vs human, human vs dumb computer, smart vs dumb computer players, or any combination of players, this does not impact the way the game is played: we have two players, and they alternate playing a move on the game until the game is over. The requirement to be able to do this is that all Player implement the same method, say play(), which can be called when it is that player's turn to play.
 
