@@ -64,6 +64,55 @@ Player 1 has won 0 games, lost 1 games, and 0 were draws.
 
 Player 2 has won 1 games, lost 0 games, and 0 were draws.
 ```
+Let's play one more game.
+
+```
+1
+```
+
+And the output.
+
+```
+   |   |
+-----------
+   |   | X
+-----------
+   |   |
+
+O to play: 1
+ O |   | X
+-----------
+   |   | X
+-----------
+   |   |
+
+O to play: 9
+ O |   | X
+-----------
+   | X | X
+-----------
+   |   | O
+
+O to play: 4
+ O | X | X
+-----------
+ O | X | X
+-----------
+   |   | O
+
+O to play: 7
+
+Result: OWIN
+ O | X | X
+-----------
+ O | X | X
+-----------
+ O |   | O
+
+Player 1 has won 0 games, lost 2 games, and 0 were draws.
+
+Player 2 has won 2 games, lost 0 games, and 0 were draws.
+```
 
 As can be seen, so far MENACE is not really good and lost twice in a row despite being first player. Let’s now train it against a perfect player.
 ```
@@ -79,7 +128,7 @@ As can be seen, so far MENACE is not really good and lost twice in a row despite
 2
 ```
 
-The result (Player 1 is MENACE) is
+The output is
 ```
 About to train with 500 games.
 Player 1 has won 0 games, lost 182 games, and 318 were draws.
@@ -89,7 +138,77 @@ Player 2 has won 182 games, lost 0 games, and 318 were draws.
 Over the last 50 games, this player has won 4, lost 0, and tied 46.
 ```
 
+MENACE (which is Player 1) has lost 182 games against the perfect player
+in the 500 that were played, and only 4 of the last 50 games.
+
 Then try again as a human player against a trained MENACE:
 ```
+   |   |
+-----------
+ X |   |
+-----------
+   |   |
+
+O to play: 5
+   |   |
+-----------
+ X | O |
+-----------
+ X |   |
+
+O to play: 1
+ O |   |
+-----------
+ X | O |
+-----------
+ X |   | X
+
+O to play: 8
+ O | X |
+-----------
+ X | O |
+-----------
+ X | O | X
+
+O to play: 3
+
+Result: DRAW
+ O | X | O
+-----------
+ X | O | X
+-----------
+ X | O | X
+```
+
+Now, MENACE is a much better player, and plays indeed very well and got a draw. Note however that it is not perfect and can still be beaten.
+
+Look at this partial game:
 
 ```
+   |   | X
+-----------
+   |   |
+-----------
+   |   |
+
+O to play: 1
+ O |   | X
+-----------
+   | X |
+-----------
+   |   |
+```
+
+Here we (Player 2) will make a terrible move (on purpose, I swear) and see how the MENACE player reacts.
+
+```
+O to play: 4
+ O | X | X
+-----------
+ O | X |
+-----------
+   |   |
+```
+
+We see that MENACE did not make the best move to win the game.  The MENACE player has not been trained at all to handle these "100% can win" scenarios like our perfect player would have played.
+
